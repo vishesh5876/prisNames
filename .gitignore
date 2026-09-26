@@ -6,10 +6,7 @@ dist/
 .next/
 .turbo/
 
-# Environment
-.env
-.env.local
-.env.*.local
+
 
 # IDE
 .idea/

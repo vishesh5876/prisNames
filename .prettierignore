@@ -1,0 +1,7 @@
+.next
+dist
+node_modules
+.turbo
+coverage
+docker-data
+pnpm-lock.yaml

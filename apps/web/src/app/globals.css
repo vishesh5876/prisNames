@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@import "@prisnames/ui/styles/theme.css";
+
+/* Scan shared UI package for Tailwind classes */
+@source "../../../../packages/ui/src/**/*.{ts,tsx}";
+
+/* ─── Tailwind Theme Integration ────────────────────── */
+@theme inline {
+  --color-background: var(--color-canvas);
+  --color-foreground: var(--color-ink);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+/* ─── Base Styles ─────────────────────────────────────── */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+/* ─── Focus Visible ──────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-brand-green-dark);
+  outline-offset: 2px;
+}
+
+/* ─── Selection ──────────────────────────────────────── */
+::selection {
+  background: var(--color-brand-green-soft);
+  color: var(--color-ink);
+}
+
+/* ─── Scrollbar (subtle) ─────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-hairline-strong);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-steel);
+}

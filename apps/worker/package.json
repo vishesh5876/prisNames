@@ -1,0 +1,39 @@
+{
+  "name": "@prisnames/worker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "test:scheduler": "vitest run src/__tests__/webhook-scheduler.integration.test.ts",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "@prisnames/config": "workspace:*",
+    "@prisnames/contracts": "workspace:*",
+    "@prisnames/database": "workspace:*",
+    "@prisnames/email-core": "workspace:*",
+    "@prisnames/logger": "workspace:*",
+    "@prisnames/registrar-core": "workspace:*",
+    "@prisnames/registrar-dynadot": "workspace:*",
+    "@prisnames/security": "workspace:*",
+    "bullmq": "^5.34.0",
+    "dotenv": "^16.6.1",
+    "drizzle-orm": "^0.44.2",
+    "ioredis": "^5.4.0",
+    "pino": "^9.0.0",
+    "postgres": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
